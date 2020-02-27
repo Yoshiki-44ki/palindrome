@@ -28,10 +28,15 @@ public class PalindromeJava {
         for (int i =0; i<line.length();i++){//repeats as many times as the number of letters in the word
         store[i]=line.charAt(i);//stores in an array in the order of the letters 
         }
-        
+        String check="";
         for (int i = 0; i<line.length(); i++ ){//make an array to output in the oppsite order 
-        System.out.print(store[line.length()-1-i]);
+        check = check+store[line.length()-1-i];
         }
+        if (line.equals(check)){
+        System.out.println("\nThis is a Palindrome:"+ line);}else{
+        System.out.println("\nthis is not a Palindrome: " +line);
+        }
+        
         
         
     }
